@@ -2,7 +2,7 @@
 
 # React homework template
 
-Ten projekt został stworzony przy pomocy
+Ten projekt został stwoony przy pomocy
 [Create React App](https://github.com/facebook/create-react-app). W celu
 zapoznania się z ustawieniami dodatkowych opcji
 [zobacz dokumentację](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -79,7 +79,7 @@ końcu łańcucha jest obowiązkowy.
 
 ```jsx
 <BrowserRouter basename="/your_repo_name/">
-  <App />
+	<App />
 </BrowserRouter>
 ```
 
