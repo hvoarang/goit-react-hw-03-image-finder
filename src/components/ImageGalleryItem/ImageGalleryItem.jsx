@@ -33,9 +33,7 @@ export class ImageGalleryItem extends Component {
 					}
 					this.setState({
 						picture:
-							this.props.page > 1
-								? [...this.state.picture, ...images.hits]
-								: images.hits,
+								 [...this.state.picture, ...images.hits],
 						status: 'resolved',
 					});
 				})
@@ -64,8 +62,8 @@ export class ImageGalleryItem extends Component {
 	};
 	render() {
 		const { picture, status, showModal } = this.state;
-		const markUp = picture?.map(({ tags, largeImageURL }) => (
-			<GalleryItem key={largeImageURL}>
+		const markUp = picture?.map(({ tags, largeImageURL, id }) => (
+			<GalleryItem key={id}>
 				<GalleryImage
 					src={largeImageURL}
 					alt={tags}
@@ -98,4 +96,5 @@ export class ImageGalleryItem extends Component {
 
 ImageGalleryItem.propTypes = {
 	pictureName: PropTypes.string.isRequired,
-};
+	handleLoadMore: PropTypes.func.isRequired,
+}; 
