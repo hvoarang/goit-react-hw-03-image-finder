@@ -22,9 +22,16 @@ export class Modal extends Component {
 			this.props.onClose();
 		}
 	};
+	 
+	hendleClose = e => {
+		if (e.target === e.currentTarget) {
+			this.props.onClose()
+		} 
+	}
+
 	render() {
 		return createPortal(
-			<Overlay onClick={this.props.onClose}>
+			<Overlay onClick={this.hendleClose}>
 				<ModalImg src={this.props.largeImage} alt="" width="900" height="700" />
 			</Overlay>,
 			modalRoot
