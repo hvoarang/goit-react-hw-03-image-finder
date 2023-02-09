@@ -140,6 +140,10 @@ export class ImageGalleryItem extends Component {
 }
 
 ImageGalleryItem.propTypes = {
+
+
+
 	pictureName: PropTypes.string.isRequired,
 	handleLoadMore: PropTypes.func.isRequired,
+	page: PropTypes.number.isRequired
 }; 
